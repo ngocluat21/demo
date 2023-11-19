@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm và Biến Thể</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+        }
+
+        .variant {
+            display: flex;
+            margin-bottom: 8px;
+        }
+
+        .variant input {
+            flex: 1;
+            margin-right: 8px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Thêm Sản Phẩm và Biến Thể</h2>
+    <form action="process.php" method="POST">
+        <!-- Thông tin sản phẩm -->
+        <label for="product_name">Tên sản phẩm:</label>
+        <input type="text" id="product_name" name="product_name" required><br><br>
+
+        <label for="product_price">Giá sản phẩm:</label>
+        <input type="number" id="product_price" name="product_price" required><br><br>
+
+        <label for="product_description">Mô tả sản phẩm:</label><br>
+        <textarea id="product_description" name="product_description" rows="4" cols="50" required></textarea><br><br>
+
+        <!-- Thông tin sản phẩm biến thể -->
+        <label for="variants">Sản phẩm biến thể:</label><br>
+        <div id="variant_container">
+            <!-- Initial variant input -->
+            <!-- ${createVariantInput(0)} -->
+        </div>
+        <button type="button" onclick="addVariant()">Thêm biến thể</button><br><br>
+
+        <input type="submit" value="Thêm sản phẩm">
+    </form>
+</div>
+
+<script>
+    let variantCount = 1;
+
+    function createVariantInput() {
+        return `
+            <div class="variant">
+                <input type="text" name="variants" placeholder="Tên biến thể" required>
+                <input type="number" name="variants" placeholder="Giá biến thể" required>
+            </div>
+        `;
+    }
+
+    function addVariant() {
+        const variantContainer = document.getElementById('variant_container');
+        const variantDiv = document.createElement('div');
+        variantDiv.className = 'variant';
+        variantDiv.innerHTML = createVariantInput();
+
+        variantContainer.appendChild(variantDiv);
+        // variantCount++;
+    }
+</script>
+
+</body>
+</html>

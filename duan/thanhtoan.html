@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEB BÁN GIÀY</title>
+    <link rel="shortcut icon" href="assets/images/logo-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+    <div class="contaier">
+        <div class="header">
+            <div class="logo">
+                <a href="index.html"><img src="assets/images/logo.jpg" alt=""></a>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="sanpham.html">Sản phẩm</a></li>
+                    <li><a href="gioithieu.html">Giới thiệu</a></li>
+                    <li><a href="lienhe.html">Liên hệ</a></li>
+                    <li><a href="hoidap.html">Hỏi đáp</a></li>
+                    <li><a href="gopy.html">Góp ý</a></li>
+                </ul>
+            </div>
+            <div class="icon_bar flex_c">
+                <div class="dropdown">
+                    <div class="icon_login">
+                        <i class="fa-regular fa-user fa-lg"></i>
+                    </div>
+                    <ul class="dropdown_list">
+                        <li class="dropdown_item">
+                            <a href="register.html" class="dropdown_link">
+                                <span class="dropdown_text">Đăng ký</span>
+                                <i class="fa-regular fa-user"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown_item">
+                            <a href="login.html" class="dropdown_link">
+                                <span class="dropdown_text">Đăng nhập</span>
+                                <i class="fa-solid fa-right-to-bracket"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown_item">
+                            <a href="donhangcuatoi.html" class="dropdown_link">
+                                <span class="dropdown_text">Đơn hàng của tôi</span>
+                            </a>
+                        </li>
+                        <li class="dropdown_item">
+                            <a href="quenmk.html" class="dropdown_link">
+                                <span class="dropdown_text">Quên mật khẩu</span>
+                            </a>
+                        </li>
+                        <li class="dropdown_item">
+                            <a href="capnhattaikhoan.html" class="dropdown_link">
+                                <span class="dropdown_text">Cập nhật tài khoản</span>
+                                <i class="fa-regular fa-address-card"></i>
+                            </a>
+                        </li>
+                        <li class="dropdown_item">
+                            <a href="#" class="dropdown_link">
+                                <span class="dropdown_text">Đăng xuất</span>
+                                <i class="fa-solid fa-right-from-bracket"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="icon_cart">
+                    <span class="quatity_cart">0</span>
+                    <a href="giohang.html"><i class="fa-solid fa-bag-shopping fa-lg"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="card_payinfo">
+                <div class="form_thanhtoan">
+                    <div class="title_pay">
+                        <h2>Thông tin vận chuyển</h2>
+                    </div>
+                    <form action="" method="post">
+                        <div class="form-field">
+                            <label for="">Họ tên <span class="required">*</span></label><br>
+                            <input type="text" name="ho-ten">
+                        </div>
+                        <div class="form-field">
+                            <label for="">Số điện thoại <span class="required">*</span></label><br>
+                            <input type="text" name="ho-ten">
+                        </div>
+                        <div class="form-field">
+                            <label for="">Email <span class="required">*</span></label><br>
+                            <input type="text" name="ho-ten">
+                        </div>
+                        <div class="form-field">
+                            <label for="">Địa chỉ <span class="required">*</span></label><br>
+                            <input type="text" name="ho-ten">
+                        </div>
+                    </form>
+                </div>
+                <div class="your_order">
+                    <div class="title_pay">
+                        <h2>Đơn hàng của bạn</h2>
+                    </div>
+                    <div class="card_title">
+                        <p>Sản phẩm</p>
+                        <p>Total</p>
+                    </div>
+                    <div class="card_product">
+                        <img class="i_p" src="assets/images/giay-adidas-galaxy-star-nam-den-trang-01-800x800.png" alt="">
+                        <div class="nsc_p">
+                            <p>Giày Adidas</p>
+                            <span>Màu: Black</span><span>Size: L</span>
+                        </div>
+                        <p class="total_pay">193898 đ</p>
+                    </div>
+                    <div class="card_product">
+                        <img class="i_p" src="assets/images/giay-adidas-galaxy-star-nam-den-trang-01-800x800.png" alt="">
+                        <div class="nsc_p">
+                            <p>Giày Adidas</p>
+                            <span>Màu: Black</span><span>Size: L</span>
+                        </div>
+                        <p class="total_pay">193898 đ</p>
+                    </div>
+                    <div class="card_pay">
+                        <div class="card_title mb">
+                            <p>Total</p>
+                            <p>139841 đ</p>
+                        </div>
+                        <span>Phương thức thanh toán</span>
+                        <div class="pay_method">
+                            <input type="radio" name="bill_pttt" id="" value="Trả tiền khi nhận hàng">
+                            <label for="">Trả tiển khi nhận hàng</label>
+                            <input type="radio" name="bill_pttt" id="" value="Chuyển khoản ngân hàng">
+                            <label for="">Chuyển khoản ngân hàng</label>
+                            <input type="radio" name="bill_pttt" id="" value="Thanh toán online">
+                            <label for="">Thanh toán online</label>
+                        </div>
+                        <div class="btn">
+                            <button type="submit">Đặt hàng</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer_section footer">
+            <div class="subscriber_mid">
+    
+                <div class="first_para">
+                    <div class="footer_logo">
+                        <img src="assets/images/android-icon-96x96.png" alt="">
+                    </div>
+                </div>
+    
+                <div class = "horizontal"></div> 
+                <div class="middle_para">
+                    <div class="footer_About">
+                        <h4 class="footer_About_para"><a class="footer_About_head" href="#">About</a></h5>
+                        <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                    </div>
+    
+                    <div class="footer_About">
+                        <h4 class="footer_About_para"><a class="footer_About_head" href="#">Policies</a></h5>
+                        <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                    </div>
+    
+                    <div class="footer_About">
+                        <h4 class="footer_About_para"><a class="footer_About_head" href="#">What's New</a></h5>
+                        <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                    </div>
+    
+                    <div class="footer_About">
+                        <h4 class="footer_About_para"><a class="footer_About_head" href="#">Legal</a></h5>
+                        <h5 class="footer_About_para"><a class="footer_About_links" href="">Terms of use</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="subscriber_last">
+                <div class = "footer_last_mid_para">
+                    <span>Unleash The Power Of Security And Development</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

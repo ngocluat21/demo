@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Sản Phẩm Biến Thể</title>
+</head>
+<body>
+
+<h2>Thêm Sản Phẩm Biến Thể</h2>
+
+<form action="process_form.php" method="post">
+    <!-- Thông tin chung của sản phẩm -->
+    <label for="productName">Tên Sản Phẩm:</label>
+    <input type="text" id="productName" name="productName" required><br><br>
+
+    <!-- Thêm sản phẩm biến thể -->
+    <div id="variantsContainer">
+        <div class="variant">
+            <label for="size">Size:</label>
+            <select name="size[]" required>
+                <option value="1">Size 1</option>
+                <option value="2">Size 2</option>
+                <!-- Thêm các tùy chọn khác nếu cần -->
+            </select>
+
+            <label for="color">Màu:</label>
+            <select name="color[]" required>
+                <option value="1">Màu 1</option>
+                <option value="2">Màu 2</option>
+                <!-- Thêm các tùy chọn khác nếu cần -->
+            </select>
+
+            <label for="stock">Số Lượng Tồn Kho:</label>
+            <input type="number" name="stock[]" required>
+
+            <label for="price">Giá:</label>
+            <input type="text" name="price[]" required>
+        </div>
+    </div>
+
+    <button type="button" onclick="addVariant()">Thêm Biến Thể</button><br><br>
+
+    <input type="submit" value="Lưu">
+</form>
+
+<script>
+    // Hàm thêm biến thể mới
+    function addVariant() {
+        var variantsContainer = document.getElementById('variantsContainer');
+        var newVariant = document.querySelector('.variant').cloneNode(true);
+        variantsContainer.appendChild(newVariant);
+    }
+</script>
+
+
+</body>
+</html>
